@@ -1,73 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mystery - Meet and Chat with Strangers</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Chat</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
     <header>
-      <h1>Mystery</h1>
-      <p>Meet and chat with strangers, unveil the mystery.</p>
+        <h1>Mystery Chat</h1>
     </header>
-
-    <section class="keywords">
-      <h2>Enter Keywords to Match Interests</h2>
-      <input type="text" id="keyword-input" placeholder="Enter keywords (e.g., movies, music, art)">
-      <button id="find-match">Find Match</button>
-    </section>
-
-    <section class="chat-section hidden">
-      <div class="chat-window">
-        <div class="chat-header">
-          <h3>Chat with a Stranger</h3>
-          <button id="skip-btn" class="control-btn">Skip</button>
-          <button id="save-btn" class="control-btn">Save</button>
+    <main>
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <button id="login-btn">Login</button>
         </div>
-        <div class="chat-box">
-          <div id="chat-messages"></div>
-          <input type="text" id="chat-input" placeholder="Type your message...">
-          <button id="send-btn">Send</button>
+        <div id="app-section" style="display: none;">
+            <input type="text" id="keyword" placeholder="Enter keywords for interests">
+            <button id="search-btn">Search</button>
+            <div id="chat-container"></div>
+            <div id="profile-section">
+                <button id="mystery-btn">Enter Mystery Mode</button>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <section class="save-id-section hidden">
-      <h2>Save Connection</h2>
-      <input type="text" id="save-name-input" placeholder="Save this stranger under a name">
-      <button id="save-final-btn">Save</button>
-    </section>
-
-    <section class="profile-section hidden">
-      <h2>Your Mystery Profile</h2>
-      <div class="profile-content">
-        <div class="profile-info">
-          <h3>Videos</h3>
-          <div class="videos">
-            <!-- Placeholder for video thumbnails -->
-            <video width="100" height="100" controls>
-              <source src="yourvideo.mp4" type="video/mp4">
-            </video>
-            <video width="100" height="100" controls>
-              <source src="yourvideo2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <h3>Photos</h3>
-          <div class="photos">
-            <!-- Placeholder for photo thumbnails -->
-            <img src="yourphoto1.jpg" alt="Photo 1" class="thumbnail">
-            <img src="yourphoto2.jpg" alt="Photo 2" class="thumbnail">
-          </div>
-        </div>
-        <button id="reveal-identity">Reveal Your Identity</button>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Mystery - Where Strangers Meet</p>
-    </footer>
-  </div>
+    </main>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
