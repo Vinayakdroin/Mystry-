@@ -16,12 +16,43 @@
             <input type="text" id="username" placeholder="Enter username">
             <button id="login-btn">Login</button>
         </div>
+        
         <div id="app-section" style="display: none;">
-            <input type="text" id="keyword" placeholder="Enter keywords for interests">
-            <button id="search-btn">Search</button>
-            <div id="chat-container"></div>
+            <!-- Profile Section -->
             <div id="profile-section">
+                <h2>Profile</h2>
+                <input type="text" id="profile-name" placeholder="Enter your profile name">
+                <button id="update-profile-btn">Update Profile</button>
+                <h3>Your Profile</h3>
+                <p id="profile-display"></p>
+                <!-- Media Upload -->
+                <input type="file" id="media-upload" multiple>
+                <button id="upload-media-btn">Upload Media</button>
+            </div>
+            
+            <!-- Search Section -->
+            <div id="search-section">
+                <input type="text" id="keyword" placeholder="Enter keywords for interests">
+                <button id="search-btn">Search</button>
+            </div>
+            
+            <!-- Chat Container -->
+            <div id="chat-container"></div>
+            
+            <!-- Mystery Mode Section -->
+            <div id="mystery-container">
                 <button id="mystery-btn">Enter Mystery Mode</button>
+                <!-- Action Buttons for Chat -->
+                <div id="action-buttons" style="display: none;">
+                    <button id="skip-btn">Skip</button>
+                    <button id="save-btn">Save</button>
+                </div>
+            </div>
+            
+            <!-- Saved Chats Section -->
+            <div id="saved-chats">
+                <h3>Saved Chats</h3>
+                <ul id="saved-chats-list"></ul>
             </div>
         </div>
     </main>
